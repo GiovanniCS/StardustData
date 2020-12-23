@@ -8,7 +8,7 @@ For each dataset is included:
 
 Moreover, under directory "Results" is collected all the data used in the method validation (Wilcoxon rank sum statistical test over 100 positional shufllings per dataset). Results subdirectories have been cleaned from unnecessary files.
 
-In order to reproduce violins plot figures you can use the following R code:
+In order to reproduce violins plot figures you can use the following bash and R code:
 ```bash
 # cd into the dataset directory you are interested on
 cd Results/MouseKidney
@@ -54,7 +54,7 @@ ggplot(df,aes(x=x, y=y, fill=physicalDistance)) + geom_violin(trim=TRUE) +
 
 ```
 
-In order to reproduce statistical evaluation figures you can use the following R code:
+In order to reproduce statistical evaluation figures you can use the following bash and R code:
 ```bash
 # cd into the dataset directory you are interested on
 cd Results/MouseKidney
@@ -119,7 +119,7 @@ barplot(count, main="Number of significant tests over 100 per configuration",
         legend = rownames(count), beside=TRUE,args.legend = list( x = "top",bty = "n", ncol = 1,inset = -0.1))
 ```
 
-If you want to reproduce the entire statistical evaluation for a single dataset you can use the following R code (it could take more than 24h depending on your machine specifications)
+If you want to reproduce the entire statistical evaluation for a single dataset you can use the following bash and R code (it could take more than 24h depending on your machine specifications)
 ```bash
 mkdir stat_evaluation && cd stat_evaluation
 # download the dataset you are interested
